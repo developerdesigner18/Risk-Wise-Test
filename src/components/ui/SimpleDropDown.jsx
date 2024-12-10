@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
-import { FaChevronDown } from 'react-icons/fa'; 
+import React, { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
+import { FaChevronDown } from "react-icons/fa";
 
 const DropdownSimple = ({ label, options, placeholder, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedValue, setSelectedValue] = useState('');
-  const [selectedLabel, setSelectedLabel] = useState('');
-  
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedValue, setSelectedValue] = useState("");
+  const [selectedLabel, setSelectedLabel] = useState("");
+
   // Reference to the dropdown element to detect outside clicks
   const dropdownRef = useRef(null);
 
@@ -18,17 +18,15 @@ const DropdownSimple = ({ label, options, placeholder, onChange }) => {
         setIsOpen(false);
       }
     };
-    
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleSelect = (value, label) => {
     setSelectedValue(value);
     setSelectedLabel(label);
-    setSearchTerm(label)
+    setSearchTerm(label);
     setIsOpen(false);
 
     // Trigger the onChange callback with the selected value
@@ -49,12 +47,16 @@ const DropdownSimple = ({ label, options, placeholder, onChange }) => {
   return (
     <div className="form-group">
       {label && <label className="label label-left">{label}</label>}
-      <div className="input-group" style={{ position: 'relative' }} ref={dropdownRef}>
-        <div className={`dropdown-simple ${isOpen ? 'active' : ''}`}>
-          <div 
-            className="dropdown-simple-head" 
-            onClick={toggleDropdown} 
-            style={{ position: 'relative' }}>
+      <div
+        className="input-group"
+        style={{ position: "relative" }}
+        ref={dropdownRef}
+      >
+        <div className={`dropdown-simple ${isOpen ? "active" : ""}`}>
+          <div
+            className="dropdown-simple-head"
+            style={{ position: "relative" }}
+          >
             <input
               type="text"
               className="input-dropdown-simple"
@@ -62,17 +64,18 @@ const DropdownSimple = ({ label, options, placeholder, onChange }) => {
               value={isOpen ? searchTerm : selectedLabel} // Use searchTerm when dropdown is open, else show selectedLabel
               onChange={(e) => handleChange(e)}
               onFocus={() => setIsOpen(true)} // When focus is on the input field, open the dropdown
-              style={{ paddingRight: '30px' }} 
+              style={{ paddingRight: "30px" }}
             />
-            <FaChevronDown 
-              style={{ 
-                position: 'absolute', 
-                right: '10px', 
-                top: '50%', 
-                transform: 'translateY(-50%)', 
-                cursor: 'pointer' 
-              }} 
-            /> {/* Arrow icon */}
+            <FaChevronDown
+              style={{
+                position: "absolute",
+                right: "10px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                cursor: "pointer",
+              }}
+            />{" "}
+            {/* Arrow icon */}
           </div>
           {isOpen && (
             <div className="dropdown-simple-list">
@@ -88,7 +91,9 @@ const DropdownSimple = ({ label, options, placeholder, onChange }) => {
                     </li>
                   ))
                 ) : (
-                  <li className="dropdown-simple-item disabled">No options found</li>
+                  <li className="dropdown-simple-item disabled">
+                    No options found
+                  </li>
                 )}
               </ul>
             </div>
@@ -113,8 +118,8 @@ DropdownSimple.propTypes = {
 };
 
 DropdownSimple.defaultProps = {
-  label: '',
-  placeholder: 'Select...',
+  label: "",
+  placeholder: "Select...",
   onChange: () => {}, // Default empty function if onChange is not provided
 };
 
