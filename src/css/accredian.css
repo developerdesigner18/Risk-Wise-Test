@@ -1,0 +1,54 @@
+.accredian{
+  background: var(--body-bg);
+  border: 1px solid var(--border-300);
+  margin-bottom: 10px;
+}
+.accredian:last-child{
+  margin-bottom: 0;
+}
+.accredian-head{
+  border-bottom: 1px solid var(--border-300);
+  background: var(--black-lighter);
+  padding: 8px 12px;
+  position: relative;
+  cursor: pointer;
+}
+.accredian-head::after{
+  position: absolute;
+  content: "\ea4e";
+  font-family: 'remixicon' !important;
+  font-size: var(--size-xxl);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  right: 7px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.accredian.expand .accredian-head::after{
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.accredian:has(.accredian-body > .table) .accredian-head{
+  border: 1px solid var(--border-300);
+}
+.accredian.expand:has(.accredian-body > .table) .accredian-head{
+  border-bottom: 0;
+}
+.accredian:has(.accredian-body > .table){
+  border: 0;
+}
+.accredian-body{
+  padding: 15px;
+  display: none;
+}
+.accredian:first-child .accredian-body{
+  display: block;
+}
+.accredian-body:has( > .table){
+  padding: 0;
+}

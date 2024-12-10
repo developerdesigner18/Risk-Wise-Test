@@ -1,0 +1,155 @@
+.dropdown-phone {
+  position: relative;
+  display: flex;
+}
+.input-dropdown-phone{
+  outline: none !important;
+  box-shadow: none !important;
+  width: 100%;
+  border: var(--border-width) solid var(--input-border);
+  background: var(--input-bg-color);
+  border-radius: var(--border-radius);
+  height: var(--input-height);
+  padding: 0 var(--input-padding-right) 2px var(--input-padding-left);
+  font-size: var(--input-size);
+  color: var(--input-color);
+  resize: none;
+  font-family: inherit;
+  display: block;
+  cursor: pointer;
+}
+.dropdown-phone-input + .input-dropdown-phone{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+}
+.phone-flag-img + .input-dropdown-phone {
+  padding-left: 36px;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-dropdown-phone:focus{
+  border-color: var(--input-focus-border);
+}
+.input-dropdown-phone::placeholder{
+  opacity: 1;
+  color: var(--input-placeholder-color);
+}
+.input-dropdown-phone:-ms-input-placeholder{
+  color: var(--input-placeholder-color); 
+}
+.input-dropdown-phone{
+  padding-right: 25px;
+}
+.dropdown-phone-head{
+  position: relative;
+  cursor: pointer;
+}
+.dropdown-phone-head::before{
+  position: absolute;
+  content: "";
+  top: 6px;
+  right: 0;
+  width: 1px;
+  background: var(--input-border);
+  height: calc(100% - 12px);
+  opacity: 0.4;
+}
+.phone-flag-img {
+  position: absolute;
+  top: 8px;
+  height: 15px;
+  left: var(--input-padding-left);
+  background: var(--black-light);
+  width: 20px;
+}
+.phone-flag-img img{
+  width: 100%;
+}
+.dropdown-phone.active .dropdown-phone-head{
+  z-index: 4;
+}
+.dropdown-phone-head::after{
+  position: absolute;
+  content: "\ea4e";
+  font-family: 'remixicon' !important;
+  right: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--size-lg);
+}
+.dropdown-phone-list{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-300);
+  box-shadow: var(--shadow);
+  z-index: 3;
+  overflow: hidden;
+  display: none;
+  max-height: 200px;
+}
+.dropdown-phone.active .dropdown-phone-list{
+  display: block;
+}
+.dropdown-phone-list.bottom{
+  top: auto;
+  bottom: 100%;
+}
+.dropdown-phone-search{
+  padding: 7px var(--input-padding-left) 7px var(--input-padding-right);
+  border-bottom: 1px solid var(--border-300);
+}
+.dropdown-phone-list ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  max-height: calc(200px - 47px);
+}
+.dropdown-phone-item{
+  cursor: pointer;
+  font-weight: normal;
+  padding: 7px var(--input-padding-right) 7px var(--input-padding-left);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: var(--input-size);
+}
+.dropdown-phone-item.line {
+  border-bottom: 1px solid var(--border-300);
+}
+.dropdown-phone-item:hover, 
+.dropdown-phone-item.selected {
+  background: var(--black-lighter);
+}
+.dropdown-phone-img {
+  width: 20px;
+  margin-right: 6px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.dropdown-phone-img img{
+  width: 100%;
+  display: block;
+}
+.dropdown-phone-input {
+  -ms-flex-nagative:0;
+  flex-shrink: 0;
+  width: 100px;
+}
+.dropdown-phone-item span {
+  display: block;
+  margin-left: 6px;
+  color: var(--input-color);
+  opacity: 0.6;
+}

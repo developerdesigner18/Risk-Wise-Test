@@ -1,0 +1,77 @@
+:root{
+  --card-header-footer-height : 53px;
+}
+.card{
+  position: relative;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  border: 1px solid var(--border-200);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-header{
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-200);
+}
+.card-header-right{
+  flex-direction: row-reverse;
+}
+.card-header:last-child{
+  border-bottom: 0;
+}
+.card-title{
+  padding-right: 20px;
+}
+.card-top-right{
+  margin-left: auto;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.card-header-right .card-top-right{
+  margin-left: 0;
+  margin-right: auto;
+}
+.card-header .btn{
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+.card-footer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-top: 1px solid var(--border-200);
+  justify-content: space-between;
+  margin-top: auto;
+}
+.card-footer-right{
+  flex-direction: row-reverse;
+}
+.card-header,.card-footer{
+  height: var(--card-header-footer-height);
+}
+.card-header,
+.card-body > .mCustomScrollBox > .mCSB_container,
+.card-footer{
+  padding: 12px;
+}
+.card-footer .button-group.right{
+  margin: 0 0 0 auto;
+}
+.card-footer-right .button-group.right{
+  margin: 0 auto 0 0;
+}
+.card-footer .button-group.center{
+  margin: 0 auto;
+}
+.no-scrollbar > .mCustomScrollBox,
+.no-scrollbar > .mCustomScrollBox > .mCSB_container{
+  overflow: initial !important;
+}
+.no-scrollbar > .mCustomScrollBox > .mCSB_container + .mCSB_scrollTools{
+  display: none !important;
+}

@@ -1,0 +1,162 @@
+.dropdown-checkbox{
+  position: relative;
+}
+.input-dropdown-checkbox{
+  outline: none !important;
+  box-shadow: none !important;
+  width: 100%;
+  border: var(--border-width) solid var(--input-border);
+  background: var(--input-bg-color);
+  border-radius: var(--border-radius);
+  height: var(--input-height);
+  padding: 0 var(--input-padding-right) 2px var(--input-padding-left);
+  font-size: var(--input-size);
+  color: var(--input-color);
+  resize: none;
+  font-family: inherit;
+  display: block;
+  cursor: pointer;
+}
+.input-dropdown-checkbox:focus{
+  border-color: var(--input-focus-border);
+}
+.input-dropdown-checkbox::placeholder{
+  opacity: 1;
+  color: var(--input-placeholder-color);
+}
+.input-dropdown-checkbox:-ms-input-placeholder{
+  color: var(--input-placeholder-color); 
+}
+.input-dropdown-checkbox{
+  padding-right: var(--input-height);
+}
+.dropdown-checkbox-head{
+  position: relative;
+  cursor: pointer;
+}
+.dropdown-simple.active .dropdown-checkbox-head{
+  z-index: 4;
+}
+.dropdown-checkbox-head::after{
+  position: absolute;
+  content: "\ea4e";
+  font-family: 'remixicon' !important;
+  right: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--size-lg);
+}
+.dropdown-checkbox-list{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-300);
+  box-shadow: var(--shadow);
+  z-index: 3;
+  overflow: hidden;
+  display: none;
+  max-height: 185px;
+}
+.dropdown-checkbox-search {
+  padding: 7px var(--input-padding-left) 7px var(--input-padding-right);
+  border-bottom: 1px solid var(--border-300);
+}
+.dropdown-checkbox.active .dropdown-checkbox-list{
+  display: block;
+}
+.dropdown-checkbox-list.bottom{
+  top: auto;
+  bottom: 100%;
+}
+.dropdown-checkbox-block{
+  overflow: hidden;
+  max-height: calc(200px - 47px);
+}
+.dropdown-checkbox-list-item > span {
+  height: var(--input-height);
+  font-weight: var(--weight-600);
+  color: var(--primary);
+  padding: 7px var(--input-padding-left) 7px var(--input-padding-right);
+  display: block;
+}
+.dropdown-checkbox-list ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dropdown-checkbox-btn {
+  padding: 5px var(--input-padding-right) 0 var(--input-padding-left);
+  border-bottom: 1px solid var(--border-300);
+  margin-bottom: 0;
+}
+.dropdown-checkbox-item{
+  cursor: pointer;
+  font-weight: normal;
+  padding: 7px var(--input-padding-right) 7px calc(var(--input-padding-right) + 24px);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: var(--input-size);
+}
+.dropdown-checkbox-item:has(p) {
+  align-items: flex-start;
+}
+.dropdown-checkbox-list-item > span + ul .dropdown-checkbox-item{
+  padding-left: calc((var(--input-padding-right) * 2) + 24px);
+}
+.dropdown-checkbox-item:hover, 
+.dropdown-checkbox-item.selected {
+  background: var(--black-lighter);
+}
+.dropdown-checkbox-item .checkbox-item {
+  margin-top: 0 !important;
+  left: var(--input-padding-left);
+  height: 18px;
+  width: 18px;
+  padding-right: 0;
+  position: absolute;
+}
+.dropdown-checkbox-item:has(p) .checkbox-item {
+  margin-top: 2px !important;
+}
+.dropdown-checkbox-list-item > span + ul .dropdown-checkbox-item .checkbox-item{
+  left: calc(var(--input-padding-left)* 2);
+}
+.dropdown-checkbox-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.dropdown-checkbox-item:has(p) .dropdown-checkbox-text {
+  margin-top: 3px;
+}
+.dropdown-checkbox-img {
+  width: 20px;
+  margin-right: 6px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.dropdown-checkbox-img img{
+  width: 100%;
+  display: block;
+}
+.dropdown-checkbox-item p {
+  font-size: var(--size-small);
+  color: var(--black-darker);
+  position: relative;
+  margin-bottom: 0;
+  width: 100%;
+  margin-top: 1px;
+}
+.input-dropdown-checkbox:disabled{
+  border-color: var(--input-diable-border);
+  background: var(--input-diable-background);
+}

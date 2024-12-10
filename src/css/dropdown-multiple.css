@@ -1,0 +1,172 @@
+.dropdown-multiple{
+  position: relative;
+}
+.input-dropdown-multiple{
+  outline: none !important;
+  box-shadow: none !important;
+  width: 100%;
+  border: var(--border-width) solid var(--input-border);
+  background: var(--input-bg-color);
+  border-radius: var(--border-radius);
+  height: var(--input-height);
+  padding: 0 var(--input-padding-right) 2px var(--input-padding-left);
+  font-size: var(--input-size);
+  color: var(--input-color);
+  resize: none;
+  font-family: inherit;
+  display: block;
+  cursor: pointer;
+}
+.input-dropdown-multiple:focus{
+  border-color: var(--input-focus-border);
+}
+.input-dropdown-multiple::placeholder{
+  opacity: 1;
+  color: var(--input-placeholder-color);
+}
+.input-dropdown-multiple:-ms-input-placeholder{
+  color: var(--input-placeholder-color); 
+}
+.input-dropdown-multiple{
+  padding-right: var(--input-height);
+}
+.dropdown-multiple-head{
+  position: relative;
+  cursor: pointer;
+}
+.dropdown-multiple.active .dropdown-multiple-head{
+  z-index: 4;
+}
+.dropdown-multiple-head::after{
+  position: absolute;
+  content: "\ea4e";
+  font-family: 'remixicon' !important;
+  right: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--size-lg);
+}
+.dropdown-multiple-list{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-300);
+  box-shadow: var(--shadow);
+  z-index: 3;
+  overflow: hidden;
+  display: none;
+  max-height: 185px;
+}
+.dropdown-multiple.active .dropdown-multiple-list{
+  display: block;
+}
+.dropdown-multiple-list.bottom{
+  top: auto;
+  bottom: 100%;
+}
+.dropdown-multiple-list ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dropdown-multiple-item{
+  cursor: pointer;
+  font-weight: normal;
+  padding: 7px var(--input-padding-right) 7px var(--input-padding-left);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: var(--input-size);
+}
+.dropdown-multiple-item:hover, 
+.dropdown-multiple-item.selected {
+  background: var(--black-lighter);
+}
+.dropdown-multiple-img {
+  width: 20px;
+  margin-right: 6px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.dropdown-multiple-img img{
+  width: 100%;
+  display: block;
+}
+.dropdown-multiple-selectItem{
+  font-size: var(--input-size);
+  font-weight: 400;
+  flex-shrink: 1;
+  position: relative;
+  height: var(--input-height);
+  padding: 0 var(--input-padding-left) 0 var(--input-padding-right);
+  cursor: default;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-width: 100%;
+  border-radius: 0px;
+  background: var(--black-lighter);
+  justify-content: space-between;
+  user-select: none;
+  border: 1px solid var(--input-border);
+  border-bottom: 0;
+  border-top: 0;
+}
+.dropdown-multiple-selectItem:last-child{
+  margin-bottom: 0;
+}
+.dropdown-multiple-selectItem:first-child{
+  border-top: 1px solid var(--input-border);
+}
+.dropdown-multiple-selectItem::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--white);
+}
+.dropdown-multiple-selectItem:first-child::after{
+  content: none;
+}
+.dropdown-multiple-selectItem + .dropdown-multiple-head .input-dropdown-multiple{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.multiple-item-remove{
+  height: var(--input-height);
+  width: var(--input-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: var(--size-md);
+  margin-right: calc(var(--input-padding-right) * -1);
+}
+.multiple-item-remove:hover{
+  background: var(--black-dark);
+  color: var(--white);
+}
+.dropdown-multiple-list-item span{
+  height: var(--input-height);
+  font-weight: var(--weight-600);
+  color: var(--primary);
+  padding: 7px var(--input-padding-left) 7px var(--input-padding-right);
+  display: block;
+}
+.dropdown-multiple-list-item span + ul .dropdown-multiple-item{
+  padding-left: 20px;
+}
+.input-dropdown-multiple:disabled{
+  border-color: var(--input-diable-border);
+  background: var(--input-diable-background);
+}

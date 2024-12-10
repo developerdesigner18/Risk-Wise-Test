@@ -1,0 +1,217 @@
+.matrix-chart-2x {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+.matrix-cart-2x-left{
+  -ms-flex-nagative :0;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+.matrix-cart-2x-right{
+  -ms-flex-nagative :0;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+.matrix-cart-2x-center{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.matrix-cart-2x-middle{
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.matrix-cart-2x-top{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.matrix-cart-2x-bottom{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.matrix-cart-2x-top .matrix-cart-2x-axis,
+.matrix-cart-2x-bottom .matrix-cart-2x-axis{
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 5px;
+  text-align: center;
+}
+.matrix-cart-2x-axis{
+  color: var(--color);
+  font-size: var(--fontSize);
+  font-weight: var(--fontWeight);
+}
+.matrix-cart-2x-axis.bottomLeft,
+.matrix-cart-2x-axis.TopLeft{
+  order: 0;
+}
+.matrix-cart-2x-axis.bottom,
+.matrix-cart-2x-axis.top{
+  order: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.matrix-cart-2x-axis.bottomRight,
+.matrix-cart-2x-axis.TopRight{
+  order: 2;
+}
+.matrix-cart-2x-box{
+  width: calc(50% - (var(--arrolwLineWidth) / 2) - 3px);
+  height: var(--MatrixBoxHeight2x);
+  background: var(--bgcolor);
+  position: relative;
+  margin-top: calc((var(--arrolwLineWidth) * 2));
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.matrix-cart-2x-box:nth-child(-n + 2){
+  border-top: 0;
+  margin-top: 0;
+}
+.matrix-cart-2x-box::after{
+  position: absolute;
+  content: "";
+  top: calc(var(--arrolwLineWidth) * -1);
+  right: calc((var(--arrolwLineWidth) - -3px)* -1);
+  width: 100%;
+  height: calc(100% + (var(--arrolwLineWidth) / 2));
+  background: var(--arrolwLineBgColor);
+  width: var(--arrolwLineWidth);
+}
+.matrix-cart-2x-box:nth-child(-n + 2):after{
+  top: 2px;
+}
+.matrix-cart-2x-box:nth-child(2n):after{
+  width: calc(100% + (var(--arrolwLineWidth) / 2));
+  height: var(--arrolwLineWidth);
+  left:calc(var(--arrolwLineWidth) * -1);
+}
+.matrix-cart-2x-box:nth-child(2):after{
+  top: auto;
+  bottom: calc((var(--arrolwLineWidth) + (var(--arrolwLineWidth) / 2)) * -1);
+}
+.matrix-cart-2x-box:nth-child(4):after{
+  top: calc((var(--arrolwLineWidth) + (var(--arrolwLineWidth) / 2)) * -1);
+  left: calc(-100% - 4px);
+}
+.matrix-cart-2x-box::before{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  z-index: 1;
+}
+.matrix-cart-2x-box:first-child:before{
+  top: -1px;
+  right: calc(((var(--arrolwLineWidth) * 2) + 3px) * -1);
+  border-left: calc(var(--arrolwLineWidth)* 1.5) solid transparent;
+  border-right: calc(var(--arrolwLineWidth)* 1.5) solid transparent;
+  border-bottom: calc(var(--arrolwLineWidth)* 2.5) solid var(--arrolwLineBgColor);
+}
+.matrix-cart-2x-box:nth-child(2):before{
+  bottom: calc(((var(--arrolwLineWidth) * 2) + (var(--arrolwLineWidth) / 2)) * -1);
+  right: -1px;
+  border-top: calc(var(--arrolwLineWidth)* 1.5) solid transparent;
+  border-bottom: calc(var(--arrolwLineWidth)* 1.5) solid transparent;
+  border-left: calc(var(--arrolwLineWidth)* 2.5) solid var(--arrolwLineBgColor);
+}
+.matrix-cart-2x-box:nth-child(3):before{
+  top: calc(((var(--arrolwLineWidth) * 2) + (var(--arrolwLineWidth) / 2)) * -1);
+  left: -1px;
+  border-top: calc(var(--arrolwLineWidth)* 1.5) solid transparent;
+  border-bottom: calc(var(--arrolwLineWidth)* 1.5) solid transparent; 
+  border-right:calc(var(--arrolwLineWidth)* 2.5) solid var(--arrolwLineBgColor);
+}
+.matrix-cart-2x-box:nth-child(4):before{
+  left: calc(((var(--arrolwLineWidth)* 2) + 3px) * -1);
+  bottom: -1px;
+  border-left: calc(var(--arrolwLineWidth)* 1.5) solid transparent;
+  border-right: calc(var(--arrolwLineWidth)* 1.5) solid transparent;
+  border-top: calc(var(--arrolwLineWidth)* 2.5) solid var(--arrolwLineBgColor);
+}
+.matrix-cart-2x-box:first-child{
+  border-top-left-radius: var(--border-radius);
+}
+.matrix-cart-2x-box:nth-child(2){
+  border-top-right-radius: var(--border-radius);
+}
+.matrix-cart-2x-box:nth-child(3){
+  border-bottom-left-radius: var(--border-radius);
+}
+.matrix-cart-2x-box:last-child{
+  border-bottom-right-radius: var(--border-radius);
+}
+.matrix-cart-2x-badge-list{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.matrix-cart-2x-badge{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--badgeFontSize);
+  font-weight: var(--badgeFontweight);
+  margin: var(--badgeGap);
+  padding: var(--badgeSpace);
+  background: var(--badgeBgcolor);
+  color: var(--badgeColor);
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+}
+.matrix-cart-2x-box.center{
+  justify-content: center;
+  align-items: center;
+}
+.matrix-cart-2x-box.topLeft,
+.matrix-cart-2x-box.topLeft .matrix-cart-2x-badge-list{
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.matrix-cart-2x-box.topRight,
+.matrix-cart-2x-box.topRight .matrix-cart-2x-badge-list{
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.matrix-cart-2x-box.topCenter,
+.matrix-cart-2x-box.topCenter .matrix-cart-2x-badge-list{
+  align-items: flex-start;
+}
+.matrix-cart-2x-box.bottomLeft,
+.matrix-cart-2x-box.bottomLeft .matrix-cart-2x-badge-list{
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.matrix-cart-2x-box.bottomRight,
+.matrix-cart-2x-box.bottomRight .matrix-cart-2x-badge-list{
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.matrix-cart-2x-box.bottomCenter,
+.matrix-cart-2x-box.bottomCenter .matrix-cart-2x-badge-list{
+  align-items: flex-end;
+}
+.matrix-cart-2x-box.centerLeft,
+.matrix-cart-2x-box.centerLeft .matrix-cart-2x-badge-list{
+  justify-content: flex-start;
+}
+.matrix-cart-2x-box.centerRight,
+.matrix-cart-2x-box.centerRight .matrix-cart-2x-badge-list{
+  justify-content: flex-end;
+}
+.matrix-cart-2x-preview{
+  margin-top: 20px;
+}

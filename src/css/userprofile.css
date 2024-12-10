@@ -1,0 +1,10 @@
+.user-img img{
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  display: block;
+}
+.user-info{
+  max-width: 400px;
+}

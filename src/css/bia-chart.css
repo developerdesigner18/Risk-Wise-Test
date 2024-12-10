@@ -1,0 +1,221 @@
+.bia-chart{
+  position: relative;
+}
+.bai-chart-top {
+  display: flex;
+  margin-bottom: 15px;
+}
+.bai-chart-head{
+  -ms-flex-nagative:0;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 170px;
+  padding-right: 0;
+  padding-top: var(--baiChartHeadTopSpace);
+}
+.bai-chart-list {
+  position: relative;
+  margin-bottom: 24px;
+}
+.bai-chart-list:last-child{
+  margin-bottom: 0;
+}
+.bai-chart-expand-head {
+  font-size: var(--baiChartHeadingTextFontSize);
+  font-weight: var(--baiChartHeadingTextFontWeight);
+  color: var(--baiChartHeadingTextColor);
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid var(--biaCharBorderColor);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  padding-right: 32px;
+}
+.bai-chart-expand-head::after{
+  position: absolute;
+  content: "\ea12";
+  right: 0;
+  top: 0;
+  bottom: 15px;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 20px;
+  font-family: remixicon !important;
+  font-size: var(--size-xxl);
+}
+.bai-chart-list-item.hideplus .bai-chart-expand-head::after{
+  content: "" !important;
+}
+.bai-chart-list-item.expand .bai-chart-expand-head::after{
+  content: "\f1af";
+}
+.bai-chart-body{
+  display: none;
+}
+.bai-chart-list-item.expand .bai-chart-body{
+  display: block;
+}
+.bai-chart-body-inner {
+  display: flex;
+}
+.bai-chart-head-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  word-break: break-word;
+  text-align: left;
+  padding-right: 10px;
+  min-height: var(--baiChartHeadLabelHeight);
+}
+.bai-chart-title,
+.bai-chart-columns{
+  flex-grow: 1;
+}
+.bai-chart-title{
+  display: flex;
+  align-items: flex-end;
+}
+.bai-chart-item{
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+}
+.bai-chart-title .bai-chart-item{
+  font-size: var(--biaChartTitleFontSize);
+  font-weight: var(--biaChartTitleFontWeight);
+  color: var(--biaChartTitleColor);
+  padding: 0px 10px 10px;
+}
+.bai-chart-list-row {
+  display: flex;
+  width: 100%;
+}
+.bai-chart-list-row .bai-chart-item{
+  padding: var(--biaCharSpace);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--biaCharItemBgColor);
+  position: relative;
+}
+.bai-chart-list-row .bai-chart-item::after,
+.bai-chart-list-row .bai-chart-item::before{
+  position: absolute;
+  content: "";
+  background: var(--biaCharlineBgColor);
+}
+.bai-chart-list-row .bai-chart-item::after{
+  top: 0;
+  bottom: 0;
+  left: -5px;
+  margin: auto;
+  width: calc(100% + 10px);
+  height: var(--biaCharlineWidth)
+}
+.bai-chart-list-row .bai-chart-item::before{
+  top: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: calc(100% + 10px);
+  width: var(--biaCharlineWidth)
+}
+.bai-chart-item-round{
+  width: var(--biaCharRoundWidth);
+  height: var(--biaCharRoundHeight);
+  background: var(--biaCharRoundBgColor);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.bai-chart-list-row-line{
+  position: relative;
+  margin-bottom: var(--biaChartHrSpace);
+}
+.bai-chart-list-row-line::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: calc((var(--biaChartHrSpace) / 2) * -1);
+  width: 100%;
+  height: var(--biaChartHrHeight);
+  background: var(--biaChartHrBgColor);
+}
+.bai-chart-list-row-line:last-child{
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.bai-chart-bottom {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--biaCharBorderColor);
+  padding-top: 15px;
+}
+.bai-chart-graph {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  font-size: var(--biaChartLowToHighFontSize);
+  font-weight: var(--biaChartLowToHighFontWeight);
+  color: var(--biaChartLowToHighColor);
+}
+.bai-chart-bottom-text {
+  width: var(--biaChartContentWidth);
+  font-size: var(--biaChartContentFontSize);
+  font-weight: var(--biaChartContentFontWeight);
+  color: var(--biaChartContentColor);
+}
+.bai-chart-graph-list {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.bai-chart-graph-item{
+  width: var(--biaChartLowToHighWidth);
+  height: var(--biaChartLowToHighHeight);
+  background: var(--biaChartLowToHighBgColor);
+  border-radius: 50%;
+  margin-right: calc((var(--biaChartLowToHighWidth) / 1.25)* -1);
+}
+.bai-chart-graph-item:last-child{
+  margin-right: 0;
+}
+.bai-chart-graph-item:nth-child(0){
+  z-index: 10;
+}
+.bai-chart-graph-item:nth-child(1){
+  z-index: 9;
+}
+.bai-chart-graph-item:nth-child(2){
+  z-index: 8;
+}
+.bai-chart-graph-item:nth-child(3){
+  z-index: 7;
+}
+.bai-chart-graph-item:nth-child(4){
+  z-index: 6;
+}
+.bai-chart-graph-item:nth-child(5){
+  z-index: 5;
+}
+.bai-chart-graph-item:nth-child(6){
+  z-index: 4;
+}
+.bai-chart-graph-item:nth-child(7){
+  z-index: 3;
+}
+.bai-chart-graph-item:nth-child(8){
+  z-index: 2;
+}
+.bai-chart-graph-item:nth-child(9){
+  z-index: 1;
+}
+.bai-chart-preview{
+  margin-top: 20px;
+}

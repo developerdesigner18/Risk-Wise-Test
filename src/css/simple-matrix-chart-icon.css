@@ -1,0 +1,276 @@
+.simple-matrix-chart-icon{
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.simple-matrix-icon-vaxis{
+  -ms-flex-nagative: 0;
+  flex-shrink: 0;
+  margin-right: 10px;
+  display: flex;
+}
+.simple-matrix-icon-box{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.simple-matrix-icon-list {
+  flex-grow: 1;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--cellSize);
+  font-weight: var(--cellWeight);
+  border: var(--cellBorderWidth) solid var(--cellBorderColor);
+  border-bottom: 0;
+  border-right: 0;
+}
+.simple-matrix-icon-vaxis-title{
+  position: relative;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  text-align: center;
+  -ms-flex-nagaive: 0;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.simple-matrix-icon-vaxis-title::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 100%;
+  width: var(--border-width);
+  background: var(--border-color);
+}
+.simple-matrix-icon-vaxis-title::before{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--border-color);
+  z-index: 1;
+}
+.simple-matrix-icon-vaxis-title span{
+  position: relative;
+  z-index: 1;
+  padding: 10px 0;
+  background: var(--white);
+  display: inline-block;
+}
+.simple-matrix-icon-vaxis-list{
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+  font-size: var(--vAxisSize);
+  border-right: var(--vAxisBorderWidth) solid var(--vAxisBorderColor);
+}
+.simple-matrix-icon-vaxis-label{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  flex: 1;
+  white-space: nowrap;
+}
+.simple-matrix-icon-vaxis-label::after{
+  position: absolute;
+  content: "";
+  width: 25px;
+  right: -30px;
+  height: var(--vAxisBorderWidth);
+  background: var(--vAxisBorderColor);
+}
+.simple-matrix-icon-haxis-title{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.simple-matrix-icon-haxis-title::after,
+.simple-matrix-icon-haxis-title::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.simple-matrix-icon-haxis-title::before{
+  left: 0;
+  height: var(--border-width);
+  width: 100%;
+  background: var(--border-color);
+}
+.simple-matrix-icon-haxis-title::after{
+  width: 0;
+  height: 0;
+  right: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid var(--border-color);
+  z-index: 1;
+}
+.simple-matrix-icon-haxis-title span{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  background: var(--white);
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+.simple-matrix-icon-haxis-list {
+  display: flex;
+  padding-top: 30px;
+  font-size: var(--hAxisSize);
+  border-top: var(--hAxisBorderWidth) solid var(--hAxisBorderColor);
+}
+.simple-matrix-icon-haxis-label{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+  white-space: nowrap;
+}
+.simple-matrix-icon-haxis-label::before{
+  position: absolute;
+  content: "";
+  width: var(--hAxisBorderWidth);
+  top: -30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 25px;
+  background: var(--hAxisBorderColor);
+}
+.simple-matrix-icon-cell{
+  display: flex;
+  width: var(--cellWidth);
+  height: var(--cellHeight);
+  background: var(--cellBgColor);
+  color: var(--cellColor);
+  border: var(--cellBorderWidth) solid var(--cellBorderColor);
+  border-top: 0;
+  border-left: 0;
+  font-weight: var(--cellWeight);
+  font-size: var(--cellSize);
+  padding: 4px;
+  position: relative;
+}
+.simple-matrix-icon-cell a{
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  display: flex;
+  color: var(--cellColor);
+  padding: 4px;
+  margin: -4px;
+  position: relative;
+  text-decoration: none;
+}
+.simple-matrix-icon-cell.center,
+.simple-matrix-icon-cell.center a{
+  align-items: center;
+  justify-content: center;
+}
+.simple-matrix-icon-cell.top.center,
+.simple-matrix-icon-cell.top.center a{
+  align-items: flex-start;
+  justify-content: center;
+}
+.simple-matrix-icon-cell.top.right,
+.simple-matrix-icon-cell.top.right a{
+  justify-content: flex-end;
+}
+.simple-matrix-icon-cell.left.center,
+.simple-matrix-icon-cell.left.center a{
+  align-items: center;
+  justify-content: flex-start;
+}
+.simple-matrix-icon-cell.right.center,
+.simple-matrix-icon-cell.right.center a{
+  align-items: center;
+  justify-content: flex-end;
+}
+.simple-matrix-icon-cell.bottom.left,
+.simple-matrix-icon-cell.bottom.left a{
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.simple-matrix-icon-cell.bottom.center,
+.simple-matrix-icon-cell.bottom.center a{
+  align-items: flex-end;
+  justify-content: center;
+}
+.simple-matrix-icon-cell.bottom.right,
+.simple-matrix-icon-cell.bottom.right a{
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.simple-matrix-marker-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 14px;
+  overflow: hidden;
+}
+.simple-matrix-marker-icon{
+  color: var(--simpleMatrixIconGridColor);
+  background: var(--simpleMatrixIconGridBgColor);
+  font-size: var(--simpleMatrixIconGridSize);
+  height: var(--simpleMatrixIconGridHeight);
+  width: var(--simpleMatrixIconGridWidth);
+  border-radius: var(--simpleMatrixIconGridRadius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.simple-matrix-marker-icon:nth-child(2){
+  margin-left: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * -1);
+}
+.simple-matrix-marker-icon:nth-child(3){
+  margin-left: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * 1);
+}
+.simple-matrix-marker-icon:nth-child(4){
+  margin-top: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * -1);
+}
+.simple-matrix-marker-icon:nth-child(5){
+  margin-top: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * 1);
+}
+.simple-matrix-marker-icon:nth-child(6){
+  margin-left: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * -1);
+  margin-top: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * -1);
+}
+.simple-matrix-marker-icon:nth-child(7){
+  margin-left: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * 1);
+  margin-top: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * -1);
+}
+.simple-matrix-marker-icon:nth-child(8){
+  margin-left: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * -1);
+  margin-top: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * 1);
+}
+.simple-matrix-marker-icon:nth-child(9){
+  margin-left: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * 1);
+  margin-top: calc(((var(--simpleMatrixIconGridWidth) * 2) + 2px) * 1);
+}
+.simple-matrix-icon-preview {
+  margin-top: 15px;
+}

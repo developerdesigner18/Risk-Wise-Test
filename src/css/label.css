@@ -1,0 +1,24 @@
+.label{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 8px;
+  font-weight: var(--weight-500);
+}
+.inline-list .label {
+  margin-bottom: 3px;
+}
+.label-right{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.label i{
+  margin-left: 3px;
+  display: block;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.label-right i{
+  margin-left: 0;
+  margin-right: 3px;
+}

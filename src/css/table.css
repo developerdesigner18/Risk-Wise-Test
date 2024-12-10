@@ -1,0 +1,98 @@
+.table-nav-outer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.table-nav-filter {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.table-nav-filter .label{
+  margin-right: 5px;
+  margin-bottom: 0;
+}
+.table-search,
+.table-filter{
+  width: 220px;
+}
+.table-search:has(+ .table-filter){
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.table-search + .table-filter .input-dropdown-simple{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+}
+.table-filter .simple-item-checkbox{
+  display: none;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+.table{
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--table-border-color);
+}
+.table-columns-chk {
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+.table-columns-chk .checkbox-item{
+  margin-top: 0;
+  padding-right: 0;
+}
+.table thead th{
+  padding: 11.5px 12px;
+  font-weight: var(--weight-600);
+  background: var(--table-header-bg);
+  color: var(--table-hader-color);
+}
+.table tbody td{
+  padding: 12px 12px;
+  background: var(--table-row-bg-color);
+  color: var(--table-row-color);
+  border-top: 1px solid var(--table-border-color);
+}
+.table tr:hover,
+.table tr:hover td,
+.table tr.selected,
+.table tr.selected td{
+  background: var(--table-row-hover-bg-color);
+}
+.table tbody td.td-expand{
+  padding: 0;
+  color: #000;
+}
+.btn-expand{
+  width: 32px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--table-row-color) !important;
+  margin: 0 !important;
+}
+.btn-expand i{
+  margin: 0;
+  font-size: var(--size-md);
+}
+.table-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.table-footer-pagination {
+  display: flex;
+  margin-left: auto;
+}
+.v-align-top{
+  vertical-align: top;
+}

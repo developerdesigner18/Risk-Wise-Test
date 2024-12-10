@@ -1,0 +1,21 @@
+.meter-outer {
+  position: relative;
+  text-align: center;
+}
+.meter-outer .meters{
+  width: 100%;
+}
+.metertextbox {
+  text-align: center;
+  display: block;
+  margin-top: -5px;
+}
+.metertext {
+  position: relative;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  padding: 0 5px;
+}

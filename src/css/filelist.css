@@ -1,0 +1,91 @@
+.tableFileList tbody td{
+  padding: 6px 12px;
+  font-size: var(--size-xxs);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.tableFileList tr:hover tr td{
+  background: transparent;
+}
+.tableFileList tbody td:first-child{
+  text-transform: capitalize;
+}
+.tableFileList tbody tr.deleted{
+  background: var(--danger-lighter) !important;
+}
+tr.deleted td{
+  color: var(--danger) !important;
+}
+.tableFileList tbody tr.changed{
+  background: var(--primary-lighter) !important;
+}
+tr.changed td{
+  color: var(--primary) !important;
+}
+.tableFileList tbody tr.unchanged{
+  background: var(--info-lighter) !important;
+}
+tr.unchanged td{
+  color: var(--info) !important;
+}
+.tableFileList tbody tr.addition{
+  background: var(--success-lighter) !important;
+}
+tr.addition td{
+  color: var(--success) !important;
+}
+.list-flag i {
+  margin-right: 5px;
+  line-height: 0;
+}
+.filelistrow thead {
+  max-height: 0;
+  opacity: 0;
+}
+.filelistrow table{
+  border-top: 0 !important;
+}
+.filelistrow thead th{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0 !important;
+}
+.filelistrow > td {
+  padding-left: 35px !important;
+  padding-right: 6px !important;
+  position: relative;
+}
+.filelistrow > td::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 16px;
+  height: calc(100% - 20px);
+  width: 1px;
+  border-left: 1px dotted var(--table-row-color);
+  opacity: 0.6;
+}
+.filelistrow tr{
+  position: relative;
+}
+.filelistrow tr::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -19px;
+  bottom: 0;
+  width: 18px;
+  height: 1px;
+  margin: auto;
+  border-top: 1px dotted var(--table-row-color);
+  opacity: 0.6;
+}
+.filelistrow{
+  display: none;
+}
+.filelistrow.expand{
+  display: table-row !important;
+}
+.tableFileList tr tr:hover td{
+  background: var(--table-row-hover-bg-color);
+}

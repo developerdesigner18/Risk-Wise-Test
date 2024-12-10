@@ -1,0 +1,69 @@
+.attachment-outer{
+  position: relative;
+}
+.attachment-upload-wrapper {
+  position: relative;
+}
+.attachment-upload-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.attachment-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 5px 5px 10px;
+  margin-bottom: 5px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--input-border);
+  position: relative;
+}
+.attachment-item:last-child{
+  margin-bottom: 0;
+}
+.attachment-item .btn{
+  margin-left: 5px;
+  margin-bottom: 0;
+  -ms-flex-nagative: 0;
+  flex-shrink: 0;
+}
+.attachment-item-input {
+  position: relative;
+  flex-grow: 1;
+}
+.attachment-item .input-textbox{
+  border-color: var(--black-lighter);
+  background: var(--black-lighter);
+  padding-right: 70px;
+}
+.attachment-item .input-textbox[readonly],
+.attachment-item .input-textbox:read-only{
+  background: transparent;
+  border-color: transparent;
+  padding-left: 0;
+}
+.attachment-ext {
+  width: 55px;
+  border-left: 1px solid var(--input-border);
+  padding-left: 12px;
+  padding-bottom: 4px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+}
+.attachment-folder {
+  position: relative;
+  border-right: 1px solid var(--input-border);
+  margin-right: 8px;
+  padding-right: 8px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}

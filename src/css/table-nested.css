@@ -1,0 +1,62 @@
+.table thead th.columsNestedArrow,
+.table tbody td.rowNestedArrow{
+  padding: 0;
+}
+.nestedArrow {
+  width: 32px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.nestedArrow i {
+  line-height: 20px;
+  width: 20px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.nestedArrow.expand i{
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.nestedRowlist{
+  border: 1px solid var(--border-300);
+  margin-left: var(--nestedRowlistWidth);
+}
+.nestedRowOuter{
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--table-border-color);
+}
+.nestedRowOuter:last-child{
+  border-bottom: 0;
+}
+.nestedRowItem{
+  width: var(--nestedRowWidth);
+  text-align: var(--nestedRowAlign);
+  padding: 11.5px 12px;
+  background: var(--table-row-bg-color);
+  color: var(--table-row-color);
+  border-right: 1px solid var(--table-border-color);
+}
+.nestedRowItem:last-child{
+  border-right: 0;
+}
+.nestedRowOuter.thead .nestedRowItem{
+  font-weight: var(--weight-600);
+  color: var(--table-hader-color);
+  background: var(--table-nested-header-bg);
+}
+.nestedTableNextRow, 
+.nestedTableNextRow > td{
+  background: transparent !important;
+}
+.nestedTableNextRow{
+  display: none;
+}
+.nestedTableNextRow.expand{
+  display: table-row;
+}

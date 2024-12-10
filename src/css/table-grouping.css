@@ -1,0 +1,27 @@
+.table-grouping-item{
+  border-bottom: 1px solid var(--table-border-color);
+  padding: 15px 10px;
+}
+.table-grouping-item:last-child{
+  border-bottom: 0;
+}
+.table-grouping-head {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.table-grouping-head i{
+  margin-right: 5px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.table-grouping-head.expand i{
+  transform: rotate(90deg);
+}
+.table-grouping-body{
+  display: none;
+}
+.table-grouping-body .table{
+  margin-top: 10px;
+}
