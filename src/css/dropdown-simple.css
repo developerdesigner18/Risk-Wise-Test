@@ -37,7 +37,7 @@
 .dropdown-simple.active .dropdown-simple-head{
   z-index: 4;
 }
-/* .dropdown-simple-head::after{
+.dropdown-simple-head::after{
   position: absolute;
   content: "\ea4e";
   font-family: 'remixicon' !important;
@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: center;
   font-size: var(--size-lg);
-} */
+}
 .dropdown-simple-list{
   position: absolute;
   left: 0;

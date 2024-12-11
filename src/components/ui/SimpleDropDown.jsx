@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import { FaChevronDown } from "react-icons/fa";
 
 const DropdownSimple = ({ label, options, placeholder, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,6 +41,7 @@ const DropdownSimple = ({ label, options, placeholder, onChange }) => {
   // Handle search term changes (for filtering)
   function handleChange(e) {
     setSearchTerm(e.target.value);
+    setSelectedLabel(e.target.value)
   }
 
   return (
@@ -66,16 +66,7 @@ const DropdownSimple = ({ label, options, placeholder, onChange }) => {
               onFocus={() => setIsOpen(true)} // When focus is on the input field, open the dropdown
               style={{ paddingRight: "30px" }}
             />
-            <FaChevronDown
-              style={{
-                position: "absolute",
-                right: "10px",
-                top: "50%",
-                transform: "translateY(-50%)",
-                cursor: "pointer",
-              }}
-            />{" "}
-            {/* Arrow icon */}
+          
           </div>
           {isOpen && (
             <div className="dropdown-simple-list">

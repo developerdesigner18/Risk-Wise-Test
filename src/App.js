@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { applyStyles } from './components/scripts/styleScript';
 import LoginForm from './components/login/LoginForm';
 import LeftTextBlock from './components/login/LeftTextBlock';
-
+import 'remixicon/fonts/remixicon.css';
 const App = () => {
  
   useEffect(() => {
